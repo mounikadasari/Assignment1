@@ -1,0 +1,12 @@
+.MenuList {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.Title {
+  margin: 30px;
+}

@@ -1,0 +1,46 @@
+.FoodList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.OrderList {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  /* color: whitesmoke; */
+}
+
+.Title1,
+.Title2 {
+  width: 500px;
+  color: whitesmoke;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 30px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.Title2 {
+  width: 250px;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 720px) {
+  .FoodList,
+  .OrderList {
+    display: block;
+    margin-top: 20px;
+  }
+  .OrderList {
+    margin-bottom: 80px;
+  }
+  .Title1 {
+    max-width: 100%;
+  }
+} ;

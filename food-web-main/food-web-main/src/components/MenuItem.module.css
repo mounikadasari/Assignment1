@@ -1,0 +1,139 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.ItemRoot {
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+  width: 250px;
+  height: 200px;
+  border-radius: 13px;
+  background-color: rgb(45, 45, 45);
+  color: whitesmoke;
+  padding: 25px 10px;
+  text-align: center;
+  font-size: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ItemRoot:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(350px at 80% 30%);
+  transition-duration: 1s;
+}
+
+.ItemRoot:hover:before {
+  background-color: rgb(255, 89, 38);
+  transition-duration: 1s;
+  clip-path: circle(140px at 5% 15%);
+}
+
+.ItemRoot::after {
+  content: " " attr(data-Num);
+  position: absolute;
+  font-size: 10em;
+  color: rgba(0, 0, 0, 0.1);
+  top: -13%;
+  left: -3%;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.ItemRoot:hover::after {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px;
+  padding: 5px;
+  border-radius: 13px;
+  background-color: whitesmoke;
+}
+
+.Button {
+  background-color: rgb(45, 45, 45);
+  color: whitesmoke;
+  width: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 10px;
+  padding-bottom: 1px;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+.Button:hover {
+  background-color: rgb(255, 89, 38);
+}
+
+.ItemImage {
+  position: absolute;
+  width: 150%;
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+  transition-duration: 0.5s;
+  transform: translate(10px, 0px);
+}
+
+.ItemRoot:hover .ItemImage {
+  width: 40%;
+  transform: translate(6px, 45%);
+  transition-duration: 0.5s;
+}
+
+.ItemName,
+.ItemPrice,
+.ItemCount {
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 10000;
+  color: whitesmoke;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  /* font-family: "poppins"; */
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+.ItemCount {
+  color: rgb(45, 45, 45);
+  font-size: 16px;
+}
+
+.ItemName {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  background-color: rgb(255, 89, 38);
+  font-weight: bold;
+  border-radius: 6px;
+  width: 80px;
+  padding: 6px;
+}
+
+.ItemPrice {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.ItemRoot:hover .ItemName,
+.ItemRoot:hover .ItemPrice {
+  transition-duration: 0.5s;
+  opacity: 1;
+  transform: translateY(0px);
+}
